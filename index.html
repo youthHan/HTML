@@ -129,13 +129,21 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Referring Video Object Segmentation (RVOS) is to segment the object instance from a given video, according to the textual description of this object. However, in the open world, the object descriptions are often diversified in contents and flexible in lengths. This leads to the key difficulty in RVOS, i.e., various descriptions of different objects are corresponding to different temporal scales in the video, which is ignored by most existing approaches with single stride offrame sampling. To tackle this problem, we propose a concise Hybrid Temporal-scale Multimodal Learning (HTML) framework, which can effectively align lingual and visual features to discover core object semantics in the video, by learning multimodal interaction hierarchically from different temporal scales. More specifically, we introduce a novel inter-scale multimodal perception module, where the language queries dynamically interact with visual features across temporal scales. It can effectively reduce complex object confusion by passing video context among different scales. Finally, we conduct extensive experiments on the widely used benchmarks, including Ref-Youtube-VOS, Ref-DAVIS17, A2D-Sentences and JHMDB-Sentences, where our HTML achieves state-of-the-art performance on all these datasets.
+            Referring Video Object Segmentation (RVOS) is to segment the object instance from a given video, according to the textual description of this object. However, in the open world, the object descriptions are often diversified in contents and flexible in lengths. 
+          </p>
+          <p>
+            This leads to the key difficulty in RVOS, i.e., various descriptions of different objects are corresponding to different temporal scales in the video, which is ignored by most existing approaches with single stride offrame sampling. To tackle this problem, we propose a concise Hybrid Temporal-scale Multimodal Learning (HTML) framework, which can effectively align lingual and visual features to discover core object semantics in the video, by learning multimodal interaction hierarchically from different temporal scales.
+          </p> 
+          <p> 
+            More specifically, we introduce a novel inter-scale multimodal perception module, where the language queries dynamically interact with visual features across temporal scales. It can effectively reduce complex object confusion by passing video context among different scales. Finally, we conduct extensive experiments on the widely used benchmarks, including Ref-Youtube-VOS, Ref-DAVIS17, A2D-Sentences and JHMDB-Sentences, where our HTML achieves state-of-the-art performance on all these datasets.
         </p>
       </div>
     </div>
   </div>
   <!--/ Abstract. -->
+</section>
 
+<section class="section">
   <!-- Contributions. -->
   <div class="columns is-centered has-text-centered">
 
@@ -159,7 +167,7 @@
           <div class="caption" align="center">
             <br/>
             <p class="caption-content">
-            L&F comparison on using language descriptions in different lengths.
+            Figure 1. L&F comparison on using language descriptions in different lengths.
             </p>
           </div>
         <br/>
@@ -170,23 +178,35 @@
     <!--/ Animation. -->
 
   </div>
-  <!--/ Contributions. -->
+</section>
 
-  <!-- Contributions. -->
-  <!-- <div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-      <h2 class="title is-3">Contributions</h2>
-      <div class="content has-text-justified">
-        <ul>
-          <li>Concise and unified learning framework: our Hybrid Temporal-scale Multimodal Learning (HTML) framework hierarchically constructs multimodal interactions via different strides of frame sampling, which can mutually enhance embeddings from both modalities for accurate segmentation.</li>
-          <li>Effective multimodal perception module: our Cross-scale Multimodal Perception (CMP) module can effectively reduce complex object confusions with intra-scale and inter-scale multimodal perceptions, where linguistic and visual features interact across temporal scales.</li>
-          <li>State-of-the-art performance on the widely-used benchmarks, which shows the superiority of our framework. Specifically, on Ref-Youtube-VOS [22], our method with ResNet-50 achieves 57.8 in L&F, outperforming the recent SOTA method [29] with ResNet-101.</li>
-        </ul>
+<section>
+  <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Motivation</h2>
+        
+        <div class="content has-text-justified">
+          <ul>
+            The open-world descriptions vary in length and contain rich semantics about the referred object, e.g., where it is, how it moves, which objects it interact with. Apparently, such diversified texts are corresponding to various temporal-scale snippets.
+          </ul>
+        </div>
+          <div class="wrap" align="center">
+            <img src="./static/images/motivation.png" 
+                 alt="Benefiting from diversified language descriptions."
+                 style="width:75%;height:auto;text-align:center;">
+          </div>
+          <div class="caption" align="center">
+            <br/>
+            <p class="caption-content">
+            Figure 2. Referring descriptions in different lengths. (a) The description is simple containing only the category name. (b) The description is complicated with movement and position of the object. Single-scale baseline (e.g., four frames in (a) and two frames in (b)) fails to segment the referred object, while our hybrid-scale HTML succeeds. More discussion can be found in introduction.
+            </p>
+          </div>
+        <br/>
       </div>
-    </div>
-  </div> -->
-  <!--/ Contributions. -->
+  </div>
+</section>
 
+<section>
   <!-- Example Cases and Experiment Results Figures Placeholder -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
@@ -196,9 +216,7 @@
       </div>
     </div>
   </div>
-  <!--/ Example Cases and Experiment Results Figures Placeholder -->
-
-</div>
+  <!--/ Example Cases and Experiment Results Figures Placeholder -->  
 </section>
 
 <section class="section" id="BibTeX">
