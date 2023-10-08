@@ -202,13 +202,21 @@
           <div class="content has-text-justified">
             <div class="columns is-centered">
               <ul>
-                The open-world descriptions vary in length and contain rich semantics about the referred object, e.g.,
-                where it is, how it moves, which objects it interact with. Apparently, such diversified texts are
-                corresponding to various temporal-scale snippets.
+                <p>
+                  The open-world descriptions vary in length and contain rich semantics about the referred object, e.g.,
+                  where it is, how it moves, which objects it interact with. Apparently, such diversified texts are
+                  corresponding to various temporal-scale snippets.
+                </p>
+                <p>
+                  For example, the language query in Figure 2(a) is a tennis ball. Such a short description is corresponding to the ball located at a small region in the middle two frames. If the single-scale baseline samples four frames as input, it will fail to segment the referred object. This is because it overlooks the dog in the center place among all these four frames, while lacking the detailed understanding in the middle two frames. 
+                </p>
+                <p>
+                  Alternatively, the language query in Figure 1(b) is a sheep top second right moves down and comes out of the circle. Such a long description is corresponding to the particular sheep in the group, which moves across frames. If the single-scale baseline samples two frames as input, it will fail to segment the referred object. This is because it is misled by the subtle movement of sheep group in only two frames, without understanding how each sheep moves from the adjacent frames.
+                </p>
               </ul>
             </div>
             <div class="wrap" align="center">
-              <img src="./static/images/motivation.png" alt="Benefiting from diversified language descriptions."
+              <img src="./static/images/motivation.png" alt="Motivation illustrations."
                 style="width:75%;height:auto;text-align:center;">
             </div>
             <div class="caption" align="center">
@@ -217,7 +225,7 @@
                 Figure 2. Referring descriptions in different lengths. (a) The description is simple containing only the
                 category name. (b) The description is complicated with movement and position of the object. Single-scale
                 baseline (e.g., four frames in (a) and two frames in (b)) fails to segment the referred object, while
-                our hybrid-scale HTML succeeds. More discussion can be found in introduction.
+                our hybrid-scale HTML succeeds.
               </p>
             </div>
             <br />
@@ -234,8 +242,23 @@
           <div class="column is-four-fifths">
             <h2 class="title is-3">Experiment Results</h2>
             <div class="content has-text-justified">
-              <!-- Insert your figures and tables here -->
+              <ul>
+                On Ref-Youtube-VOS, our ap- proach achieves 58.5 in L&F(%) with ResNet-50, as shown in Table 1, which surpasses the recent SOTA method ReferFormer with same backbone by 2.2 points. Moreover, it surpasses all the other SOTA methods with larger ResNet-101 on all evaluation metrics, which fully suggests the superiority of our method. When equipped with larger backbone, our method still show considerable superiority with accuracy gap of 1.2 points for ResNet- 101 and 1.0 points for Swin-L. We also experiment our method with the well-known Video Swin Transformers. Our method with Video-Swin-Tiny backbone surpasses the SOTA method with the same backbone by 1.8 points. With larger Video-Swin Transformers (Small and Base models), our method still achieves SOTA performance, which shows the generality of our method.
+              </ul>
             </div>
+            <div class="wrap" align="center">
+              <img src="./static/images/experiment_results.png" alt="Experiment results."
+                style="width:75%;height:auto;text-align:center;">
+            </div>
+            <div class="caption" align="center">
+              <br />
+              <p class="caption-content">
+                Table 1. Comparison with the SOTA methods on Ref-YTB-VOS. Please refer to the reference IDs in the paper.
+              </p>
+            </div>
+            <br />
+            <!--/ Interpolating. -->
+
           </div>
         </div>
       </div>
