@@ -101,6 +101,21 @@
   <!-- Contributions. -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
+      <h2 class="title is-3">Highlights</h2>
+      <div class="content has-text-justified">
+        <ul>
+          <li>Our method with ResNet-50 achieves 57.8 in L&F, surpassing the recent SOTA with ResNet-101.</li>
+          <li>Our HTML boosts the baseline model without additional modules and computations during inference.</li>
+          <li>Our HTML can significantly benefit from diversified text descriptions.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--/ Contributions. -->
+
+  <!-- Contributions. -->
+  <!-- <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
       <h2 class="title is-3">Contributions</h2>
       <div class="content has-text-justified">
         <ul>
@@ -110,13 +125,13 @@
         </ul>
       </div>
     </div>
-  </div>
+  </div> -->
   <!--/ Contributions. -->
 
   <!-- Example Cases and Experiment Results Figures Placeholder -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
-      <h2 class="title is-3">Example Cases and Experiment Results</h2>
+      <h2 class="title is-3">Experiment Results</h2>
       <div class="content has-text-justified">
         <!-- Insert your figures and tables here -->
       </div>
@@ -127,12 +142,62 @@
 </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Remarkable Finding</h2>
+        
+        <div class="content has-text-justified">
+          <ul>
+            <li>Our method with ResNet-50 achieves 57.8 in L&F, surpassing the recent SOTA with ResNet-101.</li>
+            <li>Our HTML boosts the baseline model without additional modules and computations during inference.</li>
+            <li>Our HTML can significantly benefit from diversified text descriptions, as shown in Figure 1.</li>
+          </ul>
+        </div>
+<!--         <div class="figure" style="height: 432px; background-image: url(./static/images/motivation.png);"></div> -->
+<!--         <div class="columns is-vcentered interpolation-panel"> -->
+<!--           <div class="column is-3 has-text-centered"> -->
+            
+          <div class="wrap" align="center">
+            <img src="./static/images/benefit_texts.png" 
+                 alt="Benefiting from diversified language descriptions."
+                 style="width:75%;height:auto;text-align:center;">
+          </div>
+          <div class="caption" align="center">
+            <br/>
+            <p class="caption-content">
+            L&F comparison on using language descriptions in different lengths.
+            </p>
+          </div>
+<!--             <p>Accuracy per Category and Example of left spike and right set group activity. 
+                Red dashed line and Violet dashed line below show spatial and temporal actor interaction respectively.
+            </p> -->
+<!--           </div> -->
+<!--         </div> -->
+        <br/>
+        <!--/ Interpolating. -->
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+  </div>
+</section>
 
 <section class="section" id="BibTeX">
 <div class="container is-max-desktop content">
   <h2 class="title">BibTeX</h2>
   <pre><code>
-  <!-- Insert your BibTeX here -->
+    @inproceedings{han2023html,
+      title={HTML: Hybrid Temporal-scale Multimodal Learning Framework for Referring Video Object Segmentation},
+      author={Han, Mingfei and Wang, Yali and Li, Zhihui and Yao, Lina and Chang, Xiaojun and Qiao, Yu},
+      booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+      year={2023},
+      organization={IEEE}
+    }
   </code></pre>
 </div>
 </section>
